@@ -515,42 +515,55 @@ function initScratchCards(){
    MUSIC — synthesized soft piano ambience via Web Audio API
 ===================================================== */
 function initMusic(){
-  const btn = document.getElementById("music-toggle");
-  const label = btn.querySelector(".music-label");
-  let audioCtx = null;
-  let playing = false;
-  let scheduleTimer = null;
-  let masterGain = null;
 
-  const chords = [
-    [261.63, 329.63, 392.00],
-    [293.66, 349.23, 440.00],
-    [246.94, 311.13, 392.00],
-    [220.00, 277.18, 349.23]
-  ];
-  let chordIndex = 0;
+    const btn = document.getElementById("music-toggle");
+    const label = btn.querySelector(".music-label");
 
-  function ensureCtx(){
-    if(!audioCtx){
-      audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-      masterGain = audioCtx.createGain();
-      masterGain.gain.value = 0.0001;
-      const delay = audioCtx.createDelay();
-      delay.delayTime.value = 0.32;
-      const feedback = audioCtx.createGain();
-      feedback.gain.value = 0.28;
-      const delayFilter = audioCtx.createBiquadFilter();
-      delayFilter.type = "lowpass";
-      delayFilter.frequency.value = 1800;
-      masterGain.connect(delay);
-      delay.connect(delayFilter);
-      delayFilter.connect(feedback);
-      feedback.connect(delay);
-      delay.connect(audioCtx.destination);
-      masterGain.connect(audioCtx.destination);
+    const music = document.getElementById("bgMusic");
+
+    let playing = false;
+
+    function play(){
+
+        music.play();
+
+        playing = true;
+
+        btn.classList.add("playing");
+
+        label.textContent = "Our song is playing";
+
     }
-    return audioCtx;
-  }
+
+    function pause(){
+
+        music.pause();
+
+        playing = false;
+
+        btn.classList.remove("playing");
+
+        label.textContent = "Play our song";
+
+    }
+
+    btn.addEventListener("click", ()=>{
+
+        if(playing){
+
+            pause();
+
+        }else{
+
+            play();
+
+        }
+
+    });
+
+    return ()=>null;
+
+}
 
   function pluckNote(freq, time, dur, gainVal){
     const osc = audioCtx.createOscillator();
