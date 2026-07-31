@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>Happy Girlfriend Day, Anjani ❤️</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Parisienne&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Caveat:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ================= AMBIENT CANVAS LAYERS ================= -->
+<canvas id="atmosphere-canvas"></canvas>
+<div id="light-rays"></div>
+
+<!-- ================= AUDIO TOGGLE ================= -->
+<button id="music-toggle" aria-label="Toggle music" title="Soft piano">
+  <span class="note-icon">♪</span>
+  <span class="music-label">Play our song</span>
+</button>
+
+<!-- ================= PROGRESS RIBBON ================= -->
+<div id="scroll-ribbon"><div id="scroll-ribbon-fill"></div></div>
+
+<!-- ================= NAV DOTS ================= -->
+<nav id="chapter-nav" aria-label="Chapters">
+  <a href="#landing" data-label="Cover"><span></span></a>
+  <a href="#diary" data-label="Diary"><span></span></a>
+  <a href="#gallery" data-label="Gallery"><span></span></a>
+  <a href="#openwhen" data-label="Open When"><span></span></a>
+  <a href="#scratch" data-label="Postcards"><span></span></a>
+  <a href="#letter" data-label="Letter"><span></span></a>
+</nav>
+
+<!-- ======================================================= -->
+<!-- LANDING -->
+<!-- ======================================================= -->
+<section id="landing">
+  <div class="petals-field" id="petals-field"></div>
+  <div class="confetti-field" id="confetti-field"></div>
+  <div class="sparkle-field" id="sparkle-field"></div>
+
+  <div class="landing-inner">
+    <p class="eyebrow">a small, handmade world for —</p>
+    <h1 class="anjani-title">ANJANI <span class="heart-beat">❤</span></h1>
+    <p class="occasion">Happy Girlfriend Day</p>
+
+    <div class="polaroid-hero" id="polaroid-hero">
+      <div class="polaroid-frame">
+        <div class="polaroid-photo" id="polaroid-photo">
+          <div class="undeveloped" id="polaroid-undeveloped"></div>
+          <img class="developed-art" id="polaroid-art" src="images/cover.jpg" alt="us, together" loading="lazy">
+          <div class="flash-overlay" id="flash-overlay"></div>
+          <div class="hold-progress-ring" id="hold-progress-ring"></div>
+        </div>
+        <p class="polaroid-caption">us, always &mdash; hold to develop</p>
+      </div>
+    </div>
+
+    <p class="hold-hint" id="hold-hint">press and hold the polaroid</p>
+    <a href="#diary" class="scroll-cue">
+      <span>begin the story</span>
+      <span class="scroll-cue-arrow">↓</span>
+    </a>
+  </div>
+</section>
+
+<!-- ======================================================= -->
+<!-- DIARY -->
+<!-- ======================================================= -->
+<section id="diary">
+  <h2 class="section-title">Her Diary, Written by Him</h2>
+  <p class="section-sub">A leather-bound little book I have kept in a drawer, adding a page whenever I missed you too much to stay quiet about it.</p>
+
+  <div class="diary-stage" id="diary-stage">
+    <div class="diary-closed" id="diary-closed">
+      <div class="diary-cover">
+        <div class="diary-spiral"></div>
+        <div class="diary-ribbon"></div>
+        <div class="cover-emblem">
+          <span class="cover-initials">J &amp; A</span>
+          <span class="cover-sub">est. the day you smiled at me first</span>
+        </div>
+        <div class="dust-layer" id="dust-layer"></div>
+      </div>
+      <p class="tap-hint">tap the cover to open</p>
+    </div>
+
+    <div class="diary-open" id="diary-open" hidden>
+      <div class="diary-book">
+        <div class="diary-page-left" id="diary-page-left"></div>
+        <div class="diary-page-right" id="diary-page-right"></div>
+        <div class="diary-fold" id="diary-fold"></div>
+      </div>
+      <div class="diary-controls">
+        <button id="diary-prev" aria-label="Previous page">‹ back</button>
+        <div class="diary-page-count"><span id="diary-page-num">1</span> / <span id="diary-page-total">7</span></div>
+        <button id="diary-next" aria-label="Next page">next ›</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================================================= -->
+<!-- GALLERY -->
+<!-- ======================================================= -->
+<section id="gallery">
+  <h2 class="section-title">Memories, Scattered Like They Actually Happened</h2>
+  <p class="section-sub">Not a neat grid — because nothing about falling for you was neat. Just moments, taped down before they could fade.</p>
+  <div class="gallery-board" id="gallery-board"></div>
+</section>
+
+<!-- ======================================================= -->
+<!-- OPEN WHEN -->
+<!-- ======================================================= -->
+<section id="openwhen">
+  <h2 class="section-title">Open When...</h2>
+  <p class="section-sub">Six letters, sealed in wax, for six different kinds of hard days. Only open the one you actually need.</p>
+  <div class="envelope-shelf" id="envelope-shelf"></div>
+</section>
+
+<!-- ======================================================= -->
+<!-- SCRATCH CARDS -->
+<!-- ======================================================= -->
+<section id="scratch">
+  <h2 class="section-title">Six Postcards From My Head</h2>
+  <p class="section-sub">Scratch the silver foil with your finger or cursor. Nothing here is a placeholder — it's all true.</p>
+  <div class="scratch-grid" id="scratch-grid"></div>
+</section>
+
+<!-- ======================================================= -->
+<!-- FINAL LETTER -->
+<!-- ======================================================= -->
+<section id="letter">
+  <h2 class="section-title">The Last Page</h2>
+  <div class="letter-paper" id="letter-paper">
+    <div class="letter-stamp">
+      <svg viewBox="0 0 60 70" width="60" height="70">
+        <rect x="2" y="2" width="56" height="66" rx="4" fill="#f3e6d8" stroke="#b76e79" stroke-width="2" stroke-dasharray="3 3"/>
+        <path d="M30 18 c-6-10 6-14 10-4 c4-10 16-6 10 4 c-5 8-14 14-14 14 s-9-6-14-14 c-6-10 6-14 10-4z" fill="#ff3e88" opacity="0.85" transform="scale(0.9) translate(3,4)"/>
+      </svg>
+    </div>
+    <div class="letter-content">
+      <p class="letter-date">Girlfriend Day, this year — and every year after it</p>
+      <p class="letter-greeting">My Anjani,</p>
+
+      <p>I've rewritten this letter more times than anything else I've ever written, because every draft feels too small for what I actually feel. So let me just say it plainly.</p>
+
+      <p>Before you, my days blurred into each other. Now I remember Tuesdays. I remember the color of an ordinary sky because you pointed at it. You gave my life a reason to be paid attention to — and I love the small, unfiltered parts of you most: your laugh that starts before the joke ends, the way you narrate your own thoughts out loud, how fiercely you show up for people.</p>
+
+      <p>I'm sorry for the nights my tiredness sounded like distance. You deserve a love that doesn't need to be double-checked, and I'm building exactly that — one ordinary day at a time.</p>
+
+      <p>Here's my promise: I'll keep choosing you on the boring days, not just the beautiful ones. I'll learn your silences well enough to know which need space and which need my hand. When the world is unkind to you, I want to be the softest place you know how to land.</p>
+
+      <p>I think about our future the way people think of their favorite memory — already fond of it, even though it hasn't happened yet. Small apartments, silly arguments that end in laughing, growing old still nervous before I kiss you. That's the whole dream. It was always just you.</p>
+
+      <p>So happy Girlfriend Day, Anjani. Thank you for choosing me on the good days, and harder still, on the bad ones.</p>
+
+      <p class="letter-closing">Forever Yours,<br><span class="signature">Jigar ❤</span></p>
+    </div>
+  </div>
+  <div class="final-hearts" id="final-hearts"></div>
+</section>
+
+<footer id="site-footer">
+  <p>made by hand, page by page, for Anjani — every word here is real.</p>
+</footer>
+
+<script src="js/content.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
