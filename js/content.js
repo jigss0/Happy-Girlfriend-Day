@@ -60,44 +60,8 @@ const TIMELINE_ITEMS = [
   { date:"The First Real Conversation", title:"Four Hours That Felt Like Four Minutes", caption:"We were supposed to talk for twenty minutes about something unimportant. Neither of us noticed the room getting dark.", palette:["#e7dbf6","#d8c3ed"] },
   { date:"The First Fight", title:"We Learned How To Disagree Without Leaving", caption:"It wasn't pretty. But we stayed in the room, and somewhere in that mess I understood you fight for things you actually want to keep.", palette:["#f8dce6","#a9707b"] },
   { date:"The First 'I Love You'", title:"Said By Accident, Meant On Purpose", caption:"It slipped out mid-sentence, not planned at all. I panicked for exactly one second before you smiled and said it back.", palette:["#fbf5ee","#ff3e88"] },
-  { date:"The Hardest Season", title:"The Months We Almost Didn't Survive", caption:"Distance, timing, bad communication — all of it tried to take us apart. We chose each other anyway, on purpose, more than once.", palette:["#e7dbf6","#c58e93"] },
-  { date:"The Quiet Comeback", title:"Learning Each Other Again, Slower This Time", caption:"We stopped performing 'fine' and started actually checking in. That was the real turning point, not the grand gestures.", palette:["#f8dce6","#d8c3ed"] },
-  { date:"Meeting The People Who Matter", title:"Your World Made Room For Me", caption:"Your best friend's approval mattered more to me than I expected it to. When she finally laughed at my joke, I felt like I'd passed something real.", palette:["#ffe3ef","#3d2c4a"] },
-  { date:"Today", title:"Still Choosing You, Still Slightly Nervous", caption:"No milestone, no anniversary — just an ordinary day where I looked at you and thought: still you. Still glad it's you.", palette:["#e7dbf6","#ff3e88"] },
-];
 
-const REASONS = [
-  "You ask follow-up questions like you're actually going to remember the answer — and you always do.",
-  "You apologize first when you're wrong, without turning it into a whole negotiation.",
-  "You cry at things you find beautiful, not just things that are sad.",
-  "You make even grocery runs feel like an inside joke only we understand.",
-  "You root for people who have nothing to offer you back.",
-  "You say 'I don't know, let's find out' instead of pretending to have an answer.",
-  "You keep every ticket stub like it might matter to someone someday.",
-  "You give terrible directions with complete, charming confidence.",
-  "You notice when a room's energy shifts before anyone says a word.",
-  "You still get nervous introducing me, in the best way.",
-  "You defend your friends like it's a full-time unpaid job you chose gladly.",
-  "You make fun of yourself before anyone else gets the chance to.",
-  "You save the last bite for me without being asked.",
-  "You research things you're curious about at 1 a.m. and tell me at breakfast.",
-  "You forgive people faster than they usually deserve.",
-  "You dance badly and completely without shame in the kitchen.",
-  "You remember which of my moods needs silence and which needs jokes.",
-  "You call your mother back the same day, every time.",
-  "You make lists for everything and lose half of them.",
-  "You say exactly what you mean, even when it costs you something.",
-  "You still find fireworks exciting, not performative, just genuinely exciting.",
-  "You hold grudges against fictional characters longer than real people.",
-  "You give the benefit of the doubt before you give judgment.",
-  "You show up early when it matters and you never make a thing of it.",
-  "You ask 'are you okay' and actually wait for the real answer.",
-  "You keep trying a recipe after it fails twice.",
-  "You let yourself be a beginner at things in public without flinching.",
-  "You make ordinary Tuesdays feel like they were worth showing up for.",
-  "You love loudly, without hedging your bets.",
-  "You picked me, on a day you didn't have to, and you keep picking me."
-];
+
 
 const ENVELOPES = [
   {
@@ -112,19 +76,6 @@ const ENVELOPES = [
     id:"angry", label:"Open When You're Angry", title:"For When You're Furious — At Me Or At Anything Else",
     body:"If it's me you're angry with, I want you to know that I would rather hear the unfiltered version of your frustration than a polite, edited one. I can handle it. Say the true thing. If it's not about me — if the world did something unfair to you today — then let this letter remind you that your anger is valid and you don't have to perform calm for my comfort. Be as loud as you need to be, and then, whenever you're ready, come find me. I'm not going anywhere, and I'm not scared of your anger."
   },
-  {
-    id:"alone", label:"Open When You Feel Alone", title:"For The Nights It Feels Like No One Would Notice",
-    body:"You are not as alone as it feels right now. I know feelings lie convincingly at 2 a.m., so let me say the facts plainly instead: I think about you multiple times most days, without being prompted to. Your friends talk about you when you're not in the room, in the fond way, not the obligatory way. Somewhere, right now, your name is in someone's head with a small smile attached to it. That someone is very often me. You are threaded through more lives than you can currently see. Please don't let a quiet room convince you otherwise."
-  },
-  {
-    id:"doubt", label:"Open When You Doubt Yourself", title:"For The Days You Forget Your Own Evidence",
-    body:"You have survived every hard year you were ever certain you wouldn't. That's not luck, that's you. When your mind starts listing all the ways you might not be enough, I need you to remember that this same mind also learned, adapted, showed up, and rebuilt itself more times than it gives itself credit for. I am not with you because you are flawless. I am with you because you are real, and trying, and kind in a way that isn't performative. That is more than enough. It always has been."
-  },
-  {
-    id:"smile", label:"Open When You Need A Smile", title:"For No Reason At All, Except That You Deserve One",
-    body:"Remember the time you tried to be smooth, tripped slightly, then acted like you meant to do that? I think about that more than I'll ever admit out loud. Remember our terrible, off-key car karaoke that somehow still felt like a concert? That happened because of you, not despite you. You are, without exaggeration, one of the funniest people I have ever spent ordinary time with. So here's your smile, mailed in advance, for whenever you need one: you are ridiculous, in the most lovable way, and I would not trade you for a calmer, more serious person. Not for anything."
-  }
-];
 
 const SCRATCH_CARDS = [
   { id:"impression", title:"First Impression", palette:["#efa3c1","#3d2c4a"], text:"I thought you were the kind of person who already had somewhere better to be — and then you stayed anyway, and asked me a real question instead of a small one." },
