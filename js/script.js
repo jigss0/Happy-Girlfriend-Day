@@ -521,6 +521,7 @@ function initMusic(){
   let playing = false;
   let scheduleTimer = null;
   let masterGain = null;
+   const music = document.getElementById("bgMusic");
 
   const chords = [
     [261.63, 329.63, 392.00],
@@ -577,26 +578,51 @@ function initMusic(){
   }
 
   function play(){
-    ensureCtx();
-    if(audioCtx.state === "suspended") audioCtx.resume();
-    masterGain.gain.cancelScheduledValues(audioCtx.currentTime);
-    masterGain.gain.linearRampToValueAtTime(1, audioCtx.currentTime + 1.2);
-    scheduleChord();
-    scheduleTimer = setInterval(scheduleChord, 3200);
+
+    if(music){
+
+        music.currentTime = 0;
+        music.play();
+
+    }else{
+
+        ensureCtx();
+
+        if(audioCtx.state === "suspended") audioCtx.resume();
+
+        masterGain.gain.cancelScheduledValues(audioCtx.currentTime);
+        masterGain.gain.linearRampToValueAtTime(1, audioCtx.currentTime + 1.2);
+
+        scheduleChord();
+        scheduleTimer = setInterval(scheduleChord,3200);
+
+    }
+
     playing = true;
     btn.classList.add("playing");
     label.textContent = "Our song is playing";
-  }
+}
   function pause(){
-    if(audioCtx){
-      masterGain.gain.cancelScheduledValues(audioCtx.currentTime);
-      masterGain.gain.linearRampToValueAtTime(0.0001, audioCtx.currentTime + 0.8);
+
+    if(music){
+
+        music.pause();
+
+    }else if(audioCtx){
+
+        masterGain.gain.cancelScheduledValues(audioCtx.currentTime);
+        masterGain.gain.linearRampToValueAtTime(0.0001, audioCtx.currentTime + 0.8);
+
+        clearInterval(scheduleTimer);
+
     }
-    clearInterval(scheduleTimer);
+
     playing = false;
+
     btn.classList.remove("playing");
+
     label.textContent = "Play our song";
-  }
+}
 
   btn.addEventListener("click", ()=>{ playing ? pause() : play(); });
 
