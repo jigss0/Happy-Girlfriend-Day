@@ -37,13 +37,13 @@ const DIARY_PAGES = [
     title: "Future Dreams",
     img: "diary6.jpg",
     decor: ["washi-tr","coffee-bl"],
-    text: "I think about a kitchen we'll argue in about nothing, a bookshelf that's half yours and half mine until neither of us can tell whose book is whose anymore.I think about you getting to do the version of your life you actually want, and me getting to stand next to you clapping the loudest in the room. None of it needs to be extraordinary."
+    text: "I think about a kitchen we'll argue in about nothing, a bookshelf that's half yours and half mine until neither of us can tell whose book is whose anymore.I think about you getting to do the version of your life you actually want, and me getting to stand next to you clapping the loudest in the room."
   },
   {
     title: "Forever",
     img: "diary7.jpg",
     decor: ["flower-tr","paperclip-bl"],
-    text: "Now I think forever just means: I will keep showing up tomorrow, and the day after, in the small, unglamorous, completely un-cinematic way that real love actually works. Not because it's easy. Because it's you. That's the whole diary, Anjani. Every page was just a longer way of saying the same four words: I choose you always."
+    text: "This is the last page, but never the end of my love for you. Thank you for every memory we’ve made together. I promise to keep loving you a little more every day. I love you, Anjani. ❤️."
   }
 ];
 
